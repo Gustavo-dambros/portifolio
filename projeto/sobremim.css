@@ -1,78 +1,74 @@
-
+:root{
+    --cor-fundo: #0d0d0e;;
+    --cor-principal: #cf1334;
+    --cor-secundaria: #ffff;
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: var(--cor-secundaria);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+    .container{
+        height: 100vh;
+        width: 100vw;
+        padding: 5vh;
+        background-color: var(--cor-fundo);
+        text-align: center;
+        align-items: center;
+        justify-content: space-between;
+       
+    }
 
-.container{
-    height: 100%;
-    width: 100%;
-    
-    gap: 20px;
-    background-color:#000000;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction:row;
-    padding: 5vh;
-}
+    .conteudo{
+        align-items: center;
+        justify-content: space-between;
+        display:flex;
+        padding: 5vw;
+    }
+    .container-historia{
+        background-color: var(--cor-principal);
+        width: 45vw;
+        height: 60vh;
+    }
 
-section{
-    display: flex;
-    align-items:flex-start;
-    justify-content: space-between;
-}
+    .container-skils{
+        background-color: transparent;
+        height: 60vh;
+        width: 50vh;
+        margin-right: 5vw;
+    }
 
-.container-historia{
-    width: 80vw;
-}
-
-.historia{
-    background-color: transparent;
-    border: 1px solid #cf1334;
-    color: white;
-    border-radius: 10px;
-    display: flex;
-    height: 50vh;
-    width: 60vh;
-    padding: 20px;
-
-}
-
-.container-skils{
-    width: 1vw;
-    background-color: tomato;
-    
-}
-.skil1, .skil2, .skil3, .skil4, .skil5{
-    width: 10vw;
-    background-color: chocolate;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 10px;
-}
+   
 
 .skil{
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     transition: all 0.4s ease;
-    position: absolute;
-    left: 60px;
-    color: white;
+    color: var(--cor-secundaria);
+}
+.skil1, .skil2, .skil3, .skil4, .skil5{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+img{
+    height: 5vh;
+    width: 5vh;
 }
 
 .imagem-skil{
     width: 10vh;
     height: 10vh;
     border-radius: 100px;
-    background-color: white;
+    padding: 2.5vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-secundaria);
     cursor: pointer;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -85,7 +81,7 @@ section{
 .skil4:hover .skil,
 .skil5:hover .skil {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(20%);
 }
 
 /* Aumenta o tamanho da imagem */
@@ -100,8 +96,46 @@ section{
 
 
 @media (max-width: 768px) {
-    .container{
-        flex-direction: column;
+      .container{
+        height: 100%;
+        width: 100%;
         padding: 5vh;
+        background-color: var(--cor-fundo);
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+       
     }
+
+    .conteudo{
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 5vw;
+    }
+    .container-historia{
+        background-color: var(--cor-principal);
+        width: 80vw;
+        height: 50vh;
+    }
+
+    .container-skils{
+        background-color: transparent;
+        height: 60vh;
+        width: 50vh;
+        margin: 5vw;
+    }
+    .skils{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        display: flexbox;
+    }
+    .espaco{
+        width: 20vw;
+        height: 5vh;
+        background-color: transparent;
+    }
+
 }
