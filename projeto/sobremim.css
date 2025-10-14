@@ -1,0 +1,107 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.container{
+    height: 100%;
+    width: 100%;
+    
+    gap: 20px;
+    background-color:#000000;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction:row;
+    padding: 5vh;
+}
+
+section{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+}
+
+.container-historia{
+    width: 80vw;
+}
+
+.historia{
+    background-color: transparent;
+    border: 1px solid #cf1334;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    height: 50vh;
+    width: 60vh;
+    padding: 20px;
+
+}
+
+.container-skils{
+    width: 1vw;
+    background-color: tomato;
+    
+}
+.skil1, .skil2, .skil3, .skil4, .skil5{
+    width: 10vw;
+    background-color: chocolate;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.skil{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    position: absolute;
+    left: 60px;
+    color: white;
+}
+
+.imagem-skil{
+    width: 10vh;
+    height: 10vh;
+    border-radius: 100px;
+    background-color: white;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+/* Faz o texto aparecer  */
+.skil1:hover .skil,
+.skil2:hover .skil,
+.skil3:hover .skil,
+.skil4:hover .skil,
+.skil5:hover .skil {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Aumenta o tamanho da imagem */
+.skil1:hover .imagem-skil,
+.skil2:hover .imagem-skil,
+.skil3:hover .imagem-skil,
+.skil4:hover .imagem-skil,
+.skil5:hover .imagem-skil {
+    transform: scale(1.1);
+}
+
+
+
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        padding: 5vh;
+    }
+}
