@@ -36,7 +36,7 @@
 /*Organização do formulario*/
 
 .formulario{
-    width: 60vw;
+    width: 45vw;
     height: 70vh;
     background-color: transparent;
     border-radius: 10px;
@@ -72,13 +72,18 @@ section{
 input, textarea{
     background-color: transparent;
     height: 5vh;
-    width: 20vw;
+    width: 15vw;
     padding:1vh;
+    margin-right: 5vh;
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
     resize: none;
     overflow-y: auto;
+}
+
+#mensagem{
+    width: 30vw;
 }
 
 
@@ -94,6 +99,12 @@ label{
     border: none;
     border-bottom: 1px solid white;
     outline: none;
+}
+
+.dados{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vh;
 }
 
 /*Animação quando em foco*/
@@ -116,9 +127,6 @@ input:focus::placeholder{
 
 
 
-#mensagem{
-    width: 40vw;
-}
 
 /* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
