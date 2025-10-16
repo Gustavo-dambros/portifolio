@@ -45,10 +45,18 @@
    
 
 .skil{
+    justify-content: center;
+    align-items: center;
+    padding-left: 90px;
+    padding-top: 20px;
     opacity: 0;
-    transform: translateX(-50%);
+    width: 40vh;
+    height: 11vh;
+    border-radius: 100px;
+    transform: translateX(-30%);
     transition: all 0.4s ease;
-    color: var(--cor-secundaria);
+    background-color: var(--cor-secundaria);
+    color: var(--cor-fundo);
 }
 .skil1, .skil2, .skil3, .skil4, .skil5{
     display: flex;
@@ -81,7 +89,8 @@ img{
 .skil4:hover .skil,
 .skil5:hover .skil {
     opacity: 1;
-    transform: translateX(20%);
+    transform: scale(1.1);
+    transform: translateX(-25%);
 }
 
 /* Aumenta o tamanho da imagem */
