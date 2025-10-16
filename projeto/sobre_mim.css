@@ -13,9 +13,6 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h1{
-    color:var(--cor-secundaria)
-}
 
     .container{
         height: 100vh;
@@ -54,7 +51,7 @@ h1{
     .historia{
         color: var(--cor-fundo);
         background-color: var(--cor-secundaria);
-        border: 1px solid var(--cor-principal);
+        border: 4px solid var(--cor-principal);
         width: 45vw;
         height: 55vh;
         border-radius: 5px;
@@ -111,10 +108,17 @@ h1{
         transition: all 0.3s ease;
     }
 
+    
+
+h1{
+    color:var(--cor-secundaria);
+    margin-bottom: 5vh;
+}
+
 .skil{
     justify-content: center;
     align-items: center;
-    padding-left: 60px;
+    padding-left: 5vw;
     padding-top: 25px;
     opacity: 0;
     width: 50vh;
@@ -198,7 +202,7 @@ img{
 
     .container-historia {
         
-        width: 90vw;
+        width: 80vw;
         min-height: 30vh;
         max-width: 100%;
         margin-bottom: 2vh;
@@ -212,9 +216,9 @@ img{
     }
 
     .historia {
-        width: 90vw;
+        width: 80vw;
         min-height: 30vh;
-        font-size: 2.2vh;
+        font-size: 1.5vh;
         padding: 3vw;
         border-radius: 8px;
         margin-bottom: 2vh;
@@ -247,7 +251,8 @@ img{
         max-width: 80vw;
         height: 8vh;
         font-size: 2.2vh;
-        padding: 1vh 2vw;
+        padding-left: 8vh;
+        padding-top: 5vw;
         border-radius: 40px;
         margin-left: 2vw;
         box-sizing: border-box;
