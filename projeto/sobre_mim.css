@@ -1,15 +1,20 @@
 :root{
-    --cor-fundo: #0d0d0e;;
-    --cor-principal: #cf1334;
-    --cor-secundaria: #ffff;
+    --cor-fundo: #09010c;;
+    --cor-principal: #52ff00;
+    --cor-secundaria: #ffffff;
+    --cor-texto: #09010c;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: var(--cor-secundaria);
+    
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+    color:var(--cor-secundaria)
 }
 
     .container{
@@ -29,11 +34,14 @@
         display:flex;
         padding: 5vw;
     }
-    .container-historia{
-        background-color: var(--cor-principal);
-        width: 45vw;
-        height: 60vh;
+   .container-historia{
+    display:inline;
+   }
+    .container-historia p{
+        font-size: 3vh;
+        text-align: justify;
     }
+
 
     .container-skils{
         background-color: transparent;
@@ -43,20 +51,80 @@
     }
 
    
+    .historia{
+        color: var(--cor-fundo);
+        background-color: var(--cor-secundaria);
+        border: 1px solid var(--cor-principal);
+        width: 45vw;
+        height: 55vh;
+        border-radius: 5px;
+        padding: 5vh;
+        font-size: 3vh;
+        text-align: justify;
+        bottom: 20px;
+    }
+
+    .historia-img{
+        width: 100vh;
+        height: 20vh;
+        display: flex;
+        flex-direction: initial;
+        left: 10px;
+        align-items:end;
+        justify-content:flex-start;
+        bottom: 0;
+    }
+    .historia-img img{
+        display: flex;
+        height: 20vh;
+        width: 20vh;
+    }
+
+    .download-cv img{
+        height: 4vh;
+        width: 4vh;
+        margin-left: 2vh;
+    }
+    .download-cv{
+        align-items: center;
+        justify-content: center;
+        height: 8vh;
+        width: 12vw;
+        display: flex;
+        background-color: var(--cor-secundaria);
+        border: none;
+        border-radius: 10px;
+        padding: 1vh;
+        font-size: 3vh;
+        cursor: pointer;
+        color: var(--cor-fundo);
+        margin-top: 2vh;
+    }   
+
+    /*Hover botao de download do curriculo*/
+
+    .download-cv:hover{
+        background-color: transparent;
+        color: var(--cor-principal);
+        border: 1px solid var(--cor-principal);
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+    }
 
 .skil{
     justify-content: center;
     align-items: center;
-    padding-left: 90px;
-    padding-top: 20px;
+    padding-left: 60px;
+    padding-top: 25px;
     opacity: 0;
-    width: 40vh;
+    width: 50vh;
     height: 11vh;
     border-radius: 100px;
     transform: translateX(-30%);
     transition: all 0.4s ease;
     background-color: var(--cor-secundaria);
     color: var(--cor-fundo);
+    border: 1px solid var(--cor-principal);
 }
 .skil1, .skil2, .skil3, .skil4, .skil5{
     display: flex;
@@ -77,6 +145,7 @@ img{
     align-items: center;
     justify-content: center;
     background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-principal);
     cursor: pointer;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -105,46 +174,113 @@ img{
 
 
 @media (max-width: 768px) {
-      .container{
-        height: 100%;
-        width: 100%;
-        padding: 5vh;
+    .container {
+        min-height: 100vh;
+        width: 100vw;
+        padding: 3vh;
         background-color: var(--cor-fundo);
         text-align: center;
-        align-items: center;
-        justify-content: center;
-       
-    }
-
-    .conteudo{
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: column;
-        padding: 5vw;
-    }
-    .container-historia{
-        background-color: var(--cor-principal);
-        width: 80vw;
-        height: 50vh;
-    }
-
-    .container-skils{
-        background-color: transparent;
-        height: 60vh;
-        width: 50vh;
-        margin: 5vw;
-    }
-    .skils{
+        display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        display: flexbox;
-    }
-    .espaco{
-        width: 20vw;
-        height: 5vh;
-        background-color: transparent;
+        justify-content: flex-start;
+        box-sizing: border-box;
     }
 
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .container-historia {
+        
+        width: 90vw;
+        min-height: 30vh;
+        max-width: 100%;
+        margin-bottom: 2vh;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+    .container-historia p {
+        font-size: 2vh;
+        font-style: normal;
+        padding: 2vw;
+    }
+
+    .historia {
+        width: 90vw;
+        min-height: 30vh;
+        font-size: 2.2vh;
+        padding: 3vw;
+        border-radius: 8px;
+        margin-bottom: 2vh;
+        box-sizing: border-box;
+    }
+
+    .container-skils {
+        width: 95vw;
+        min-height: 30vh;
+        margin: 0 auto 2vh auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+
+    .skil1, .skil2, .skil3, .skil4, .skil5 {
+        flex-direction: row;
+        width: 90vw;
+        margin-bottom: 3vh;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+    }
+
+    .skil {
+        width: 60vw;
+        min-width: 120px;
+        max-width: 80vw;
+        height: 8vh;
+        font-size: 2.2vh;
+        padding: 1vh 2vw;
+        border-radius: 40px;
+        margin-left: 2vw;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    .imagem-skil {
+        width: 7vh;
+        height: 7vh;
+        padding: 1vh;
+        border-radius: 50%;
+        margin-right: 2vw;
+        box-sizing: border-box;
+    }
+
+    .download-cv {
+        width: 60vw;
+        min-width: 120px;
+        font-size: 2.2vh;
+        padding: 1.5vh 2vw;
+        margin-top: 3vh;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    img {
+        height: 4vh;
+        width: 4vh;
+    }
+
+    .espaco {
+        width: 10vw;
+        height: 3vh;
+        background-color: transparent;
+    }
 }
