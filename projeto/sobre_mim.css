@@ -1,6 +1,6 @@
 :root{
-    --cor-fundo: #09010c;;
-    --cor-principal: #52ff00;
+    --cor-fundo: hsl(284, 85%, 3%);;
+    --cor-principal: #cf1334;
     --cor-secundaria: #ffffff;
     --cor-texto: #09010c;
 }
@@ -15,7 +15,7 @@
 
 
     .container{
-        height: 100vh;
+        height: 200vh;
         width: 100vw;
         padding: 5vh;
         background-color: var(--cor-fundo);
@@ -33,6 +33,7 @@
     }
    .container-historia{
     display:inline;
+    position: relative;
    }
     .container-historia p{
         font-size: 3vh;
@@ -75,7 +76,16 @@
         display: flex;
         height: 20vh;
         width: 20vh;
+        transform: translateY(-50px);
+        position: absolute;
+        top: 75px;
     }
+
+    .img-rodape{
+        justify-content: flex-end;  
+        margin-left: 80vh;
+        margin-bottom: 11vh;
+        }
 
     .download-cv img{
         height: 4vh;
@@ -102,7 +112,7 @@
 
     .download-cv:hover{
         background-color: transparent;
-        color: var(--cor-principal);
+        color: var(--cor-secundaria);
         border: 1px solid var(--cor-principal);
         transform: scale(1.1);
         transition: all 0.3s ease;
@@ -128,7 +138,8 @@ h1{
     transition: all 0.4s ease;
     background-color: var(--cor-secundaria);
     color: var(--cor-fundo);
-    border: 1px solid var(--cor-principal);
+    border: 2px solid var(--cor-principal);
+    
 }
 .skil1, .skil2, .skil3, .skil4, .skil5{
     display: flex;
@@ -149,7 +160,10 @@ img{
     align-items: center;
     justify-content: center;
     background-color: var(--cor-secundaria);
-    border: 1px solid var(--cor-principal);
+    border-left: 2px solid var(--cor-principal);
+    border-top: 2px solid var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+     border-right: 2px solid var(--cor-principal);
     cursor: pointer;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -173,6 +187,9 @@ img{
 .skil4:hover .imagem-skil,
 .skil5:hover .imagem-skil {
     transform: scale(1.1);
+    border-right: 0px solid var(--cor-principal);
+     border-top: 0px solid var(--cor-principal);
+      border-bottom: 0px solid var(--cor-principal);
 }
 
 
