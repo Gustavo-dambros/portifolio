@@ -1,0 +1,108 @@
+
+:root{
+    --cor-fundo: hsl(284, 85%, 3%);;
+    --cor-principal: #cf1334;
+    --cor-secundaria: #ffffff;
+    --cor-texto: #09010c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container{
+    height: 150vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color:var(--cor-fundo);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+}
+
+.carrosel{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    height: 60%;
+    width: 100%;
+}
+
+
+.titulo{
+    color:var(--cor-secundaria)
+}
+.titulo:hover{
+    transition: 0.5s;
+    transform: scale(1.1);
+    text-decoration: underline;
+    color: var(--cor-principal);
+}
+
+/*container do projeto*/
+
+.projeto{
+    height: 40vh;
+    width: 35vw;
+    margin: 1vw;
+    border-radius: 20px;
+   border: 1px solid var(--cor-secundaria);
+   background-color: aqua;
+}
+
+
+/*informações sobre o projeto*/
+
+.info-proj{
+    height: 40vh;
+    width: 35vw;
+    border-radius: 20px;
+    
+    display: flex;
+    align-items: flex-end;
+    opacity: 1;
+     background-size:cover;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-image: url(img/locare.png);
+}
+
+.info-proj:hover{
+    
+    transform: translateX(40vh);
+    transition: 0.5s;
+}
+/*Icones*/
+.icons{
+    display: flex;
+}
+
+/*estilo dos icones, tamanho e cores*/
+.icon{
+      width: 9vh;
+    height: 9vh;
+    border-radius: 100px;
+    padding: 3vh;
+    margin-left: 3vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-secundaria);
+    border-left: 2px solid var(--cor-principal);
+    border-top: 2px solid var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+     border-right: 2px solid var(--cor-principal);
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+img{
+    height: 3vh;
+    width: 3vh;
+}
