@@ -1,52 +1,49 @@
 :root{
-    --cor-fundo: hsl(284, 85%, 3%);;
+    --cor-fundo: hsl(284, 85%, 3%);
     --cor-principal: #cf1334;
     --cor-secundaria: #ffffff;
     --cor-texto: #09010c;
 }
 
-
-
-
+/* Reset e fonte */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    color: var(--cor-secundaria);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--cor-secundaria);
+    overflow-x: hidden;
 }
 
-
+/* Container principal */
 .container{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
-    
-    flex-wrap: wrap;
-    gap: 20px;
-    background-color:var(--cor-fundo);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 10vh;
+    gap: 20px;
+    background-color: var(--cor-fundo);
+    text-align: center;
+    padding: 10vh 5vw;
 }
-/*titulo do form*/
+
+/* Títulos do formulário */
 .titulo_form{
     cursor: pointer;
     margin-bottom: 1ch;
-}
-.titulo_form:hover{
-    color: var(--cor-principal);
     transition: 0.5s;
 }
 
+.titulo_form:hover{
+    color: var(--cor-principal);
+}
 
-
-/*Organização do formulario*/
-
+/* Formulário */
 .formulario{
     width: 45vw;
-    height: 70vh;
+    min-height: 70vh;
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid var(--cor-principal);
@@ -54,146 +51,119 @@
     padding: 5vh;
     display: flex;
     flex-direction: column;
-     margin: auto;
+    justify-content: center;
+    margin: auto;
+    gap: 3vh;
 }
 
-
+/* Sections */
 section{
     width: 100%;
-    height: 10%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
     flex-direction: row;
-    margin: auto;
-    padding-left:5vw ;
-    padding-right:5vw ;
-}
-
-.button-submit{
     align-items: center;
-    justify-content: center;
-}
-/*Estilo do input type text*/
-
-
-input, textarea{
-    background-color: transparent;
-    height: 5vh;
-    width: 15vw;
-    padding:1vh;
-    margin-right: 5vh;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    resize: none;
-    overflow-y: auto;
-}
-
-#mensagem{
-    width: 30vw;
-}
-
-
-
-label{
-    display: flex;}
-
- .input_texto input, .input_texto textarea{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;  
-    border: none;
-    border-bottom: 1px var(--cor-secundaria);
-    outline: none;
-}
-
-.dados{
-    display: flex;
     justify-content: space-between;
     gap: 2vh;
 }
 
-/*Animação quando em foco*/
-.input_texto input:focus, .input_texto textarea:focus{
-    border: none;
-    border-bottom: 1px solid var(--cor-principal);
-    outline: none;
-    transition: 0.3s;
+/* Section botão */
+.button-submit{
+    justify-content: center;
+    margin-top: 2vh;
 }
 
+/* Container dos inputs */
+.input_texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.5vh;
+}
 
+/* Labels */
+label{
+    font-size: 1rem;
+}
+
+/* Inputs e textarea */
+input, textarea{
+    background-color: transparent;
+    width: 100%;
+    padding: 1vh;
+    border: none;
+    border-bottom: 1px solid var(--cor-secundaria);
+    outline: none;
+    color: var(--cor-secundaria);
+    resize: none;
+    transition: all 0.3s ease;
+}
+
+/* Placeholder */
 input::placeholder, textarea::placeholder{
     color: var(--cor-principal);
 }
 
-input:focus::placeholder{
-    color: var(--cor-principal);
-    transition:0.3s;
+/* Foco nos inputs e textarea */
+input:focus, textarea:focus{
+    border-bottom: 1px solid var(--cor-principal);
+    box-shadow: 0 2px 5px rgba(207, 19, 52, 0.3);
 }
 
-
-
-
-/* Estilo da barra de rolagem */
-::-webkit-scrollbar {
-    width: 7px;
-    
-}
-/*fundo da barra*/
-::-webkit-scrollbar-track {
-    background-color:#303033;
-    border-radius:100px ;
-    margin: 5px;
-}
-/*bolinha da barra*/
-::-webkit-scrollbar-thumb {
-    background-color: var(--cor-principal);
-    height: 7px;
-    border-radius: 100px;
+/* Altura do textarea */
+#mensagem{
+    min-height: 15vh;
 }
 
-/*Estilo do botão*/
+/* Botão enviar */
 .enviar{
-       height: 8vh;
+    height: 8vh;
     width: 20vh;
     background-color: transparent;
     color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 2px;
+    transition: all 0.3s ease;
 }
+
 .enviar:hover{
     border-radius: 10px;
     background-color: var(--cor-principal);
-    color:var(--cor-secundaria);
+    color: var(--cor-secundaria);
     cursor: pointer;
-    transition: 0.5s;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px var(--cor-principal);
 }
 
+/* Layout dos dados (nome e email lado a lado) */
+.dados{
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    flex-wrap: wrap;
+}
 
-/*Responsividade*/
-
+/* Responsividade */
 @media (max-width: 768px){
-    .container{
-        padding:5vh
-    }
-    section{
-        flex-direction: column;
-        height: auto;
-    }
     .formulario{
         width: 80vw;
-        height: 60vh;
+        min-height: auto;
         padding: 2vh;
     }
+    .dados{
+        flex-direction: column;
+    }
     input, textarea{
-        width: 50vw;
+        width: 100%;
         height: 6vh;
         margin-bottom: 2vh;
     }
     #mensagem{
-        width:50vw;
+        width: 100%;
+    }
+    .enviar{
+        width: 60vw;
+        height: 6vh;
     }
 }
