@@ -39,6 +39,7 @@
   height: 80vh;
   padding-bottom: 10px;
   justify-content: space-between;
+  margin-top: 10vh;
 }
 
 /* Título */
@@ -73,9 +74,9 @@
 /* Card dos projetos */
 .card-proj {
   position: relative;
-  background-color: whitesmoke;
+  
   width: 70vh;
-  height: 35vh;
+  height: 70vh;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -89,21 +90,22 @@
 .img-proj {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 50%;
   display: flex; /* centraliza conteúdo */
   align-items: center;
   justify-content: center;
   transition: all 0.6s ease;
+   border-radius: 10px;
   color: var(--cor-fundo);
 }
 
 /* Info aparece no hover */
 .info-proj {
-  opacity: 0;
+  
   background-color: var(--cor-secundaria);
   flex-direction: column;
   padding: 2vh;
-  z-index: 2;
+  z-index: 1;
 
     overflow-x: hidden; /* impede scroll horizontal */
     overflow-y: auto;   /* permite scroll vertical só se necessário */
@@ -113,19 +115,29 @@
 
 
 
-.card-proj:hover .info-proj {
-  opacity: 1;
-}
+
 
 .img-proj {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 2;
+ border: 1px solid var(--cor-secundaria);
 }
 
 .card-proj:hover .img-proj {
-  opacity: 0;
+ 
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+
+.card-proj:hover .info-proj {
+ transform: translateY(99%);
+ border-top-left-radius: 0px;
+ border-top-right-radius: 0px;
+
+ opacity: 1;
   pointer-events: none; /* garante que clique passe para info-proj */
 }
 
@@ -182,41 +194,81 @@
   font-size: 1rem;
   margin-left: 5vh;
 }
-
-/* Responsividade */
+/* Responsividade CORRIGIDA */
 @media (max-width: 768px) {
-   .container {
+    /* Container principal */
+    .container {
         min-height: 100vh;
         width: 100vw;
-        padding: 3vh;
-        background-color: var(--cor-fundo);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        padding: 5vh 3vw; /* Ajuste para ter respiro */
         justify-content: flex-start;
-        box-sizing: border-box;
+        gap: 30px; /* Adiciona mais espaço entre os itens */
     }
-  .carrosel {
-       flex-direction: column;
-        align-items: center;
+
+    /* Carrossel de cards */
+    .carrosel {
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center; /* Centraliza os cards */
         justify-content: flex-start;
         padding: 2vw;
-        width: 100%;
-        box-sizing: border-box;
-  }
+        height: auto; /* [CRUCIAL] Deixa a altura ser automática para listar todos os cards */
+        margin-top: 5vh;
+    }
 
+    /* Card dos projetos */
+    .card-proj {
+        width: 90vw; /* Ocupa 90% da largura da tela */
+        height: 100vh; /* [CRUCIAL] Altura automática para envolver a imagem e a info */
+        /* Remova completamente 'height: 60vh;' se ele estiver lá */
+        margin-bottom: 5vh;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* Sombra mais visível */
+    }
 
-  .card-proj {
-    width: 90vw;
-    height: 40vh;
-    margin-bottom: 5vh;
-  }
+    /* Imagem e Info */
+    .info-proj,
+    .img-proj {
+        /* [CORREÇÃO CRUCIAL] Remove o posicionamento absoluto para que se empilhem */
+        position: relative; 
+        
+        width: 100%; /* Ocupa a largura total do card */
+        height: auto; /* Altura de acordo com o conteúdo */
+        
+        /* Reseta a posição original de Absolute */
+        top: auto;
+        left: auto;
+        transform: none; /* [CORREÇÃO CRUCIAL] Remove qualquer transformação de slide/hover */
+        
+        opacity: 1; /* Garante que a informação esteja visível */
+        pointer-events: auto; /* Garante que o texto seja clicável/rolável */
+        
+        /* Força a imagem a ter uma altura visual */
+        height: 40vh;
+    }
+    
+    .info-proj {
+        min-height: 25vh; /* Garante que a área de texto não seja muito pequena */
+        border-radius: 0 0 10px 10px; /* Arredonda as bordas inferiores */
+    }
 
-  .tec-proj {
-  color: var(--cor-fundo);
-  font-size: 1rem;
-  margin-left: 5vh;
-  margin-right: 5vh;
-}
+    .img-proj {
+        border-radius: 10px 10px 0 0; /* Arredonda as bordas superiores */
+        border: 1px solid var(--cor-secundaria);
+    }
+    
+    /* [CORREÇÃO CRUCIAL] Desativa o efeito de hover no mobile */
+    .card-proj:hover .info-proj,
+    .card-proj:hover .img-proj {
+       background-color: azure;
+    }
+
+    /* Ícones e tecnologias */
+    .container-icon {
+        height: auto; /* Deixa o container crescer para caber os ícones */
+        padding: 10px 0;
+    }
+    
+    .tec-proj {
+        font-size: 0.9rem;
+        margin: 0 3vw; /* Ajusta as margens para melhor visualização */
+    }
 }
