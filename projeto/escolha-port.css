@@ -1,126 +1,171 @@
-  :root {
-    --cor-fundo: hsl(284, 85%, 3%);
-    --cor-principal-G: #cf1334;
-      --cor-principal-M: #0026ff;
-    --cor-secundaria: #ffffff;
-    --cor-texto: #09010c;
-  }
+:root {
+    /* Variáveis de Cores */
+    --cor-fundo: hsl(284, 85%, 3%); /* Fundo escuro */
+    --cor-principal-G: #cf1334; /* Vermelho forte para Gustavo */
+    --cor-principal-M: #0026ff; /* Azul forte para Miguel */
+    --cor-secundaria: #ffffff; /* Branco para texto */
+    --cor-texto: #09010c; /* Não está sendo usada, mas mantida */
 
-  /* Reset e fonte */
-  * {
+    /* Variáveis de Dimensões Comuns */
+    --tamanho-perfil: 300px;
+}
+
+/* Reset e Fonte */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    overflow-x: hidden;
-  }
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    /* Removido overflow-x: hidden para evitar problemas de layout */
+}
 
-  /* Container principal */
-  .container {
-    min-height: 150vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+body {
     background-color: var(--cor-fundo);
-    text-align: center;
-    padding: 10vh;
-  }
-
-  .conteudo {
-          align-items: center;
-          justify-content: space-between;
-          padding: 2vw;
-          height: 80vh;
-          width: 100%;
-          padding-left: 20vh;
-          padding-right:20vh ;
-          display: flex;
-          
-      }
-
-  .repositorio{
-      height: 30vw ;
-      width: 25vw;
-      padding: 1vh;
+    /* Garante que o container ocupe a altura total do viewport */
+    min-height: 100vh; 
     display: flex;
-      flex-direction: column; /* Organiza os itens verticalmente */
-      align-items: center;    /* Centraliza os filhos horizontalmente */
-  }
-  .img-perfil-G{
-    height: 50%;
-    width: 80%;
-    background:url(img/perfil-G.jpg);
-    margin-bottom: 3vh;
-  background-position:center;
-  background-size: cover;
-  background-repeat:no-repeat;
-  }
+    justify-content: center;
+    align-items: center;
+}
 
-  .img-perfil-M{
-    height: 50%;
-    width: 80%;
-    background:url(img/perfil-G.jpg);
-    margin-bottom: 3vh;
-  background-position:center;
-  background-size: cover;
-  background-repeat:no-repeat;
-  }
+/* Container principal (usando body para o fundo e alinhamento) */
+.container {
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima do conteúdo */
+    padding: 50px 20px;
+    text-align: center;
+}
 
-  #R-M{
-      border: 1px solid var(--cor-principal-M);
-  }
+/* Cabeçalho */
+.cabecalho {
+    margin-bottom: 50px;
+}
 
-  #R-G{
-      border: 1px solid var(--cor-principal-G);
-  }
-
-  .nome{
+.cabecalho h1 {
     color: var(--cor-secundaria);
-    margin-bottom: 2vw;
-  }
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
 
-  .me{
+.descricao-projeto {
     color: var(--cor-secundaria);
-    margin-bottom: 10vh;
-  }
+    max-width: 700px;
+    margin: 0 auto; /* Centraliza a descrição */
+    font-size: 1.1em;
+}
 
-  .veja-mais{
-    height: 5vh;
-    width: 20vh;
-    background-color: transparent;
-    border: none;
-    color: var(--cor-secundaria);
-  }
+/* Seção de Conteúdo (Perfis) */
+.conteudo {
+    display: flex;
+    justify-content: center; /* Centraliza os perfis */
+    gap: 50px; /* Espaço entre os perfis */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
 
-  #veja-mais-G{
-    border: 1px solid var(--cor-principal-G);
-  }
+/* Perfil Individual */
+.perfil {
+    width: var(--tamanho-perfil);
+    min-height: 450px;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.perfil:hover{
+/* Leve elevação (sombra) */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15); 
+    /* Sombra colorida por perfil para um efeito mais dramático */
+    filter: brightness(1.1);
+    /* Sutilmente levanta o cartão */
+    transform: translateY(-5px);
+}
 
-
-  #veja-mais-M{
+/* Estilos de borda por ID */
+#perfil-miguel {
     border: 1px solid var(--cor-principal-M);
-  }
-  /* Pseudo-elemento que fará o preenchimento deslizar */
-  #veja-mais-G::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #cf1334; /* Cor de preenchimento (cor principal) */
-      transform: translateX(-100%); /* Começa fora do botão, à esquerda */
-      transition: transform 0.4s ease-in-out; /* Transição para o slide */
-      z-index: -1; /* Fica abaixo do texto (z-index: 1) */
-  }
+}
 
-  /* Efeito Hover */
-  #veja-mais-G:hover {
-      color: white; /* Texto fica branco quando o fundo preenche */
-  }
+#perfil-gustavo {
+    border: 1px solid var(--cor-principal-G);
+}
 
-  #veja-mais-G:hover::before {
-      transform: translateX(0); /* Desliza o fundo preenchido para dentro */
-  }
+/* Imagem de Perfil */
+.img-perfil {
+    height: var(--tamanho-perfil);
+    width: 100%;
+    margin-bottom: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px; /* Adiciona um leve arredondamento */
+}
+
+/* URLs das Imagens (Ajuste o caminho se necessário) */
+/* Atenção: Verifique se o caminho 'img/perfil-G.jpg' e 'img/perfil-M.jpg' estão corretos */
+.img-perfil-G {
+    background-image: url(img/perfil-G.jpg);
+}
+
+/* Seu HTML estava usando a mesma imagem para M, eu corrigi o caminho presumindo que você tenha 'perfil-M.jpg' */
+.img-perfil-M { 
+    background-image: url(img/miguel.png);
+}
+
+.nome {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.bio {
+    color: var(--cor-secundaria);
+    margin-bottom: 30px;
+    flex-grow: 1; /* Garante que ocupe o espaço antes do botão */
+    padding: 0 10px;
+}
+
+/* Botão Veja Mais */
+.veja-mais {
+  height: 5vh;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    cursor: pointer;
+   
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos de borda e hover para Gustavo */
+#veja-mais-G {
+    border: 1px solid var(--cor-principal-G);
+}
+#veja-mais-G:hover {
+    background-color: var(--cor-principal-G);
+    color: var(--cor-fundo); /* Altera a cor do texto no hover */
+}
+
+/* Estilos de borda e hover para Miguel */
+#veja-mais-M {
+    border: 1px solid var(--cor-principal-M);
+}
+#veja-mais-M:hover {
+    background-color: var(--cor-principal-M);
+    color: var(--cor-fundo); /* Altera a cor do texto no hover */
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column; /* Empilha os perfis em telas menores */
+        gap: 30px;
+    }
+    .perfil {
+        width: 100%;
+        max-width: 350px; /* Limita a largura máxima no modo empilhado */
+        margin: 0 auto;
+    }
+}
