@@ -128,7 +128,7 @@ form.addEventListener('submit', function (e) {
 document.addEventListener('DOMContentLoaded', () => {
     const btnTrocarPort = document.getElementById('trocar-port');
     const body = document.body;
-    const targetUrl = '/Portifolio/inicio/portifoliomiguel.html'; 
+    const targetUrl = 'portifoliomiguel.html'; 
     
     if (btnTrocarPort) {
         btnTrocarPort.addEventListener('click', (event) => {

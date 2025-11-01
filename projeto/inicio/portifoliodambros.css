@@ -108,7 +108,7 @@ nav button {
   height: 2.5rem;
   color: var(--text-color);
   transition: color 0.4s ease, transform 0.3s ease;
-  background-image: url("/Portifolio/img/lua.svg.svg");
+  background-image: url("/projeto/img/lua.svg.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -117,7 +117,7 @@ nav button {
 
 .modo-claro nav button {
   background-size: 3rem;
-  background-image: url("/Portifolio/img/sol.svg.svg");
+  background-image: url("/projeto/img/sol.svg.svg");
   filter: invert(0);
 }
 
@@ -138,7 +138,7 @@ nav button:hover {
   cursor: pointer;
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url("/Portifolio/img/trocar.svg"); 
+  background-image: url("/projeto/img/trocar.svg"); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
