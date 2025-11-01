@@ -2,15 +2,17 @@ Relatório de Projeto Front-end: Portfólio Duplo interativo
 1. Informações Básicas
 Título do Projeto: Portfólio duplo interativo.
 Alunos(as):Gustavo Dambros N12, Miguel Helmann N30.
+
+LINK APRESENTAÇÂO:https://gustavo-dambros.github.io/portifolio/projeto/escolher/index.html
 Link do Projeto Online GitHub: https://gustavo-dambros.github.io/portifolio/projeto/inicio/portifoliomiguel.html
 Link do Repositório GitHub: https://github.com/Gustavo-dambros/portifolio
 https://github.com/miguelhelmann/portifolio
-2. Descrição do Projeto
+3. Descrição do Projeto
 Qual é o propósito da sua página web? O que ela faz ou sobre o que ela é?
 Qual problema ela tenta resolver ou qual informação ela quer transmitir?
 Qual foi a sua principal ideia ou conceito para este projeto?
 Nosso projeto é um Portfólio em dupla, sua ideia é nos auxiliar a adentrar no mercado de trabalho como estudantes de front-end fazendo isso em dupla para trazer maior diversidade e criatividade no desing, tendo a opção de futuramente separarmos os portfólios para uso pessoal.Mantendo sempre a separação individual de habilidades, projetos e descrições pessoais.
-3. Funcionalidades Implementadas
+4. Funcionalidades Implementadas
 Liste as principais funcionalidades que você desenvolveu, separando por tecnologia (HTML, CSS, JavaScript). Seja específico!
 HTML:
 HTML – Estrutura e Recursos Utilizados
