@@ -108,7 +108,7 @@ nav button {
   height: 2.5rem;
   color: var(--text-color);
   transition: color 0.4s ease, transform 0.3s ease;
-  background-image: url("/projeto/imagem/lua.svg.svg");
+  background-image: url("../img/lua.svg.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -139,7 +139,7 @@ nav button:hover {
   cursor: pointer;
   width: 2.5rem;
   height: 2.5rem;
-  background-image: url("/projeto/img/trocar.svg"); 
+  background-image: url("../img/trocar.svg"); 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1051,16 +1051,16 @@ a:hover {
 }
 
 .modo-claro .git-f {
-  content: url(/portifolio/img/github.svg);
+  content: url(../img/github.svg);
 }
 
 .modo-claro .git-mode {
-  content: url(/portifolio/img/github.svg);
+  content: url(../img/github.svg);
 }
 
 
 .modo-claro .git-tec {
-  content: url(/portifolio/img/githubwhite.svg);
+  content: url(../img/githubwhite.svg);
   width: 100%;
   height: auto;
 }
