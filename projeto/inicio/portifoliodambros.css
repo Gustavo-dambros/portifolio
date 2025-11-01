@@ -108,7 +108,7 @@ nav button {
   height: 2.5rem;
   color: var(--text-color);
   transition: color 0.4s ease, transform 0.3s ease;
-  background-image: url("/projeto/img/lua.svg.svg");
+  background-image: url("/projeto/imagem/lua.svg.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -117,7 +117,8 @@ nav button {
 
 .modo-claro nav button {
   background-size: 3rem;
-  background-image: url("/projeto/img/sol.svg.svg");
+ background-image: url("../img/sol.svg.svg"); /* sobe uma pasta, depois entra em img */
+
   filter: invert(0);
 }
 
