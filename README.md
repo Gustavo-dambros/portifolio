@@ -3,7 +3,7 @@ Relatório de Projeto Front-end: Portfólio Duplo interativo
 Título do Projeto: Portfólio duplo interativo.
 Alunos(as):Gustavo Dambros N12, Miguel Helmann N30.
 
-LINK APRESENTAÇÂO:[https://gustavo-dambros.github.io/portifolio/projeto/escolher/index.html](https://gustavo-dambros.github.io/portifolio/projeto/escolher/index.html)
+LINK APRESENTAÇÂO:https://gustavo-dambros.github.io/portifolio/projeto/escolher/index.html
 Link do Projeto Online GitHub: https://gustavo-dambros.github.io/portifolio/projeto/inicio/portifoliomiguel.html
 Link do Repositório GitHub: https://github.com/Gustavo-dambros/portifolio
 https://github.com/miguelhelmann/portifolio
