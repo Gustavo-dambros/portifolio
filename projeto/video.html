@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeo de Fundo Tela Cheia</title>
+<style>
+  /* Remove margens e define altura total */
+ 
+
+  /* Vídeo ocupa toda a tela */
+  video {
+    position: fixed;       /* Fica preso no fundo */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;           /* Fica atrás de tudo */
+    transform: translate(-50%, -50%);
+    object-fit: cover;     /* Cobre toda a tela sem distorcer */
+  }
+
+  
+</style>
+</head>
+<body>
+
+  <!-- Vídeo de fundo -->
+  <video autoplay muted loop>
+    <source src="img/MIRAGE 2B 360 8K 2025.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+
+  
+</body>
+</html>
