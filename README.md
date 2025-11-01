@@ -80,5 +80,5 @@ Mais funções com CSS e JS: Adicionar mais animações com css e js.
 Gustavo: Pagina de escolha do Portfolio, Página de projetos, Pagina para contato, Página “sobre mim”.
 Miguel:Página home, Página “habilidades”, Footer, Integração e correções da responsividade nas páginas, animação em geral e para a mudança de portfolio.
 
-
+LINK relatório:https://docs.google.com/document/d/1a5TL--4pFGKGeqFcDWBTVtk5I6bt5chr1G33Kns_PK0/edit?usp=sharing
 LINK projeto:https://gustavo-dambros.github.io/portifolio/projeto/inicio/portifoliomiguel.html
