@@ -117,8 +117,7 @@ nav button {
 
 .modo-claro nav button {
   background-size: 3rem;
-background-image: url("../img/sol.svg.svg"); /* sobe uma pasta, depois entra em img */
-
+  background-image: url("/projeto/img/sol.svg.svg");
   filter: invert(0);
 }
 
